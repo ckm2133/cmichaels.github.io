@@ -10,6 +10,7 @@
 
     <!-- Bootstrap core CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <style>
       .bd-placeholder-img {
@@ -27,6 +28,42 @@
         }
       }
     </style>
+
+    <script>
+      function displayHome() {
+        document.getElementById('contact').style.display = "none"
+        document.getElementById('projects').style.display = "none"
+        var contactID = document.getElementById("home");
+        if (contactID.style.display === "none") {
+          contactID.style.display = "block";
+        } else {
+          contactID.style.display = "none";
+        }
+      }
+
+      function displayProjects() {
+        document.getElementById('home').style.display = "none"
+        document.getElementById('contact').style.display = "none"
+        var curr_id = document.getElementById("projects");
+        if (curr_id.style.display === "none") {
+          curr_id.style.display = "block";
+        } else {
+          curr_id.style.display = "none";
+        }
+      }
+
+      function displayContact() {
+        document.getElementById("home").style.display = "none";
+        document.getElementById("projects").style.display = "none";
+        var curr_id = document.getElementById("contact");
+        if (curr_id.style.display === "none") {
+          curr_id.style.display = "block";
+        } else {
+          curr_id.style.display = "none";
+        }
+      }
+    </script>
+
     <!-- Custom styles for this template -->
     <link href="cover.css" rel="stylesheet">
   </head>
@@ -36,24 +73,36 @@
     <div class="inner">
       <h3 class="masthead-brand">Christina's Portfolio</h3>
       <nav class="nav nav-masthead justify-content-center">
-        <a class="nav-link active" href="home">Home</a>
-        <a class="nav-link" href="#">Projects</a>
-        <a class="nav-link" href="#" onclick = >Contact</a>
+        <a class="nav-link active" href="#" onclick = "displayHome();">Home</a>
+        <a class="nav-link" href="#" onclick = "displayProjects()">Projects</a>
+        <a class="nav-link" id = "contactNav" href="#" onclick = "displayContact()">Contact</a>
       </nav>
     </div>
   </header>
 
   <main role="main" class="inner cover">
-    <h1 class="cover-heading">Welcome!</h1>
-    <p class="lead">Thanks for stopping by. This site is under construction.</p>
-    <p class="lead">
-      <a href="#" class="btn btn-lg btn-secondary" onclick = >Learn more</a>
-    </p>
+    <div id = "home">    
+      <h1 class="cover-heading">Welcome!</h1>
+    </div>
+
+    <div id = "projects" style = "display:none">    
+      <h1 class="cover-heading">Projects</h1>
+      <p class="lead">This page is under contruction. Check back later!</p>
+    </div>
+  
+    <div id = "contact" style = "display:none;">    
+      <h1 class="cover-heading">Contact</h1>
+      <p class="lead">Thanks for stopping by!</p>
+      <img src="DisplayImage.jpeg" style="width:50%; height:50%;">
+      <p><strong>ckm2022@mit.edu</strong></p>
+      <p><strong>(301) 789-6896</strong></p>
+      <a href="https://www.linkedin.com/in/christinakmichaels"><i class="fa fa-linkedin-square"></i></a>
+    </div>
   </main>
 
   <footer class="mastfoot mt-auto">
     <div class="inner">
-      <p>Cover template for <a href="https://getbootstrap.com/">Bootstrap</a>, by <a href="https://twitter.com/mdo">@mdo</a>.</p>
+      <p><small>Cover template for <a href="https://getbootstrap.com/">Bootstrap</a>, by <a href="https://twitter.com/mdo">@mdo</a>.</small></p>
     </div>
   </footer>
 </div>

@@ -61,6 +61,7 @@ body {
  */
 .masthead {
   margin-bottom: 2rem;
+  padding-bottom: 20px;
 }
 
 .masthead-brand {
@@ -116,4 +117,17 @@ body {
  */
 .mastfoot {
   color: rgba(255, 255, 255, .5);
+  padding: 20px
+}
+
+.fa {
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50%;
+}
+
+.fa:hover {
+  opacity: 0.7;
 }
